@@ -102,7 +102,7 @@ void CWiFiNetwork::initialize() {
     );
 }
 
-void CWiFiNetwork::send(const void *i_pBuffer, const int16_t i_shSize) {
+void CWiFiNetwork::send(const void *i_pBuffer, const uint16_t i_shSize) {
     if (CWiFiNetwork::isConnected()) {
         AsyncUDPMessage grMsg(i_shSize);
         grMsg.write(reinterpret_cast<const uint8_t *>(i_pBuffer), i_shSize);

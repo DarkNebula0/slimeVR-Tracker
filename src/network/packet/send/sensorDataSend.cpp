@@ -13,11 +13,11 @@ namespace Packet {
             SRotationData grRotation;
             grRotation.nId = i_nId;
             grRotation.nAccuracy = i_nAccuracy;
-            grRotation.dSensorRotation = (i_nId == 0) ? IMU_ROTATION : SECOND_IMU_ROTATION;
-            grRotation.dX = i_grQuat.dX;
-            grRotation.dY = i_grQuat.dY;
-            grRotation.dZ = i_grQuat.dZ;
-            grRotation.dW = i_grQuat.dW;
+            grRotation.nDataType = 1;
+            grRotation.rX = static_cast<float>(i_grQuat.dX);
+            grRotation.rY = static_cast<float>(i_grQuat.dY);
+            grRotation.rZ = static_cast<float>(i_grQuat.dZ);
+            grRotation.rW = static_cast<float>(i_grQuat.dW);
 
             SendStruct(grRotation);
         }

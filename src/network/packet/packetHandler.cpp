@@ -57,6 +57,17 @@ namespace Packet {
         grOperation.fnFunction = &Global::HandshakeRequest;
         AddOperation();
 
+        // Sensor info
+        grOperation.chID = TrackerPacket::Receive::EID::SensorInfoSl;
+        grOperation.fnFunction = &Global::SensorInfoRequest;
+        AddOperation();
+
+        // Ping pong
+        grOperation.chID = TrackerPacket::Receive::EID::PingPong;
+        grOperation.fnFunction = &Global::PingPong;
+        AddOperation();
+
+
         CLogger::instance()->info("%u Handler were registered", this->m_afnPacket.size());
     }
 }

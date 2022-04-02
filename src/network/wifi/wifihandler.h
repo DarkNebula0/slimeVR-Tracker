@@ -40,7 +40,7 @@ public:
 public:
     void initialize();
 
-    void send(const void *i_pBuffer, int16_t i_shSize);
+    void send(const void *i_pBuffer, uint16_t i_shSize);
 
     __inline void setIsSlimeServerConnected(bool i_bState) {
         this->m_bIsSlimeServerConnected = i_bState;

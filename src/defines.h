@@ -23,8 +23,15 @@
 */
 // Constants
 #define IMU_NONE 0
-#define IMU_ICM20948 1
-#define IMU_MPU6050 2 // IMU_MPU6500 IMU_MPU6050
+#define IMU_MPU9250 1
+#define IMU_MPU6500 2
+#define IMU_BNO080 3
+#define IMU_BNO085 4
+#define IMU_BNO055 5
+#define IMU_MPU6050 6
+#define IMU_BNO086 7
+#define IMU_BMI160 8
+#define IMU_ICM20948 9
 
 #define DEG_0 0.f
 #define DEG_90 -PI / 2
@@ -68,6 +75,6 @@
 #define HOTSPOT_PASSWORD "SlimeVR-Hotspot"
 #define UDP_PORT 6969
 #define SLIME_SERVER_TIMEOUT_MS 10000
-#define USE_WIFI_DATA false
+#define USE_WIFI_DATA true
 #define WIFI_SSID ""
 #define WIFI_PASSWORD ""

@@ -9,5 +9,9 @@ namespace Packet {
         void HardBeatRequest(const uint8_t *i_pBuffer, const uint16_t &i_nSize);
 
         void HandshakeRequest(const uint8_t *i_pBuffer, const uint16_t &i_nSize);
+
+        void SensorInfoRequest(const uint8_t *i_pBuffer, const uint16_t &i_nSize);
+
+        void PingPong(const uint8_t *i_pBuffer, const uint16_t &i_nSize);
     }
 }
